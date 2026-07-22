@@ -9,14 +9,10 @@
 
 
 
-# B2) Vypiš součet všech čísel od 50 do 100 včetně.
-#     Rozmysli si, jaký range zapsat, aby platila obě krajní čísla.
+# B2) Průměr od 1 do N. Uživatel zadá číslo N. Vypiš průměr všech čísel
+#     od 1 do N (součet čísel vyděl jejich počtem).
 
 
 
-# B3) Máš tři naměřené teploty (klidně i záporné). Vypiš dvě věci:
-#     - jak velké bylo rozpětí (nejteplejší mínus nejchladnější den),
-#     - jak daleko od nuly byla ta nejextrémnější teplota.
-teplota1 = -8
-teplota2 = 5
-teplota3 = 12
+# B3) Cíl a rozpočet. Uživatel zadá cenu tří položek. Vypiš nejlevnější
+#     a nejdražší z nich a jestli se všechny tři vejdou do rozpočtu 1000 Kč.

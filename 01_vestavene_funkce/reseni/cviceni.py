@@ -54,7 +54,8 @@ print("s DPH:", round(cena * 1.21), "Kč")   # bez DPH: 1000 Kč, s DPH: 1210 K�
 
 
 # 9) Zeptej se uživatele na tři čísla (klidně i záporná) a vypiš,
-#    jak velké je to největší z nich BEZ ohledu na znaménko.
+#    jak velké je to největší z nich bez ohledu na znaménko.
+#    Např. z čísel -20, 5 a 12 je největší velikost 20.
 a = int(input("Zadej první číslo: "))
 b = int(input("Zadej druhé číslo: "))
 c = int(input("Zadej třetí číslo: "))

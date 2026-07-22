@@ -10,16 +10,21 @@ lidi = int(input("Kolik vás bylo? "))
 print(round(cena / lidi, 2))        # pro 1000 a 3 vypíše 333.33
 
 
-# B2) Vypiš součet všech čísel od 50 do 100 včetně.
-#     Rozmysli si, jaký range zapsat, aby platila obě krajní čísla.
-print(sum(range(50, 101)))          # 3825   DO se nepočítá, proto 101
+# B2) Průměr od 1 do N. Uživatel zadá číslo N. Vypiš průměr všech čísel
+#     od 1 do N (součet čísel vyděl jejich počtem).
+n = int(input("Zadej N: "))
+prumer = sum(range(1, n + 1)) / n       # +1, aby se počítalo i samotné N
+print(prumer)                           # pro 10 vypíše 5.5
 
 
-# B3) Máš tři naměřené teploty (klidně i záporné). Vypiš dvě věci:
-#     - jak velké bylo rozpětí (nejteplejší mínus nejchladnější den),
-#     - jak daleko od nuly byla ta nejextrémnější teplota.
-teplota1 = -8
-teplota2 = 5
-teplota3 = 12
-print(max(teplota1, teplota2, teplota3) - min(teplota1, teplota2, teplota3))  # 20
-print(max(abs(teplota1), abs(teplota2), abs(teplota3)))                        # 12
+# B3) Cíl a rozpočet. Uživatel zadá cenu tří položek. Vypiš nejlevnější
+#     a nejdražší z nich a jestli se všechny tři vejdou do rozpočtu 1000 Kč.
+cena1 = int(input("Cena 1: "))
+cena2 = int(input("Cena 2: "))
+cena3 = int(input("Cena 3: "))
+print("Nejlevnější:", min(cena1, cena2, cena3))
+print("Nejdražší:", max(cena1, cena2, cena3))
+if cena1 + cena2 + cena3 <= 1000:
+    print("Vejdou se do rozpočtu.")
+else:
+    print("Rozpočet nestačí.")

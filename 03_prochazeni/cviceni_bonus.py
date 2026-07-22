@@ -27,9 +27,10 @@
 
 
 
-# B4) Teploty za týden. Uživatel postupně zadá sedm denních teplot
-#     (klidně i záporných). Vypiš průměrnou teplotu, nejteplejší
-#     a nejchladnější naměřenou hodnotu a kolik dní bylo pod nulou.
+# B4) Teplotní skok. Uživatel postupně zadá sedm denních teplot
+#     (klidně i záporných). Najdi a vypiš největší skok mezi dvěma
+#     sousedními dny – tedy největší rozdíl teplot ze dne na den
+#     (bez ohledu na to, jestli teplota stoupla, nebo klesla).
 
 
 

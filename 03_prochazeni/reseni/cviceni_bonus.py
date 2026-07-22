@@ -4,15 +4,22 @@
 
 
 # B1) Trojúhelník z hvězdiček. Uživatel zadá výšku a ty vypiš
-#     trojúhelník, kde první řádek má jednu hvězdičku, druhý dvě atd.
+#     trojúhelník, kde první řádek má jednu hvězdičku, druhý dvě atd.:
+#     *
+#     **
+#     ***
 vyska = int(input("Jak vysoký trojúhelník? "))
 for radek in range(1, vyska + 1):
-    print("*" * radek)               # "*" * 3 je "***"
+    print("*" * radek)                   # "*" * 3 je "***"
 
 
-# B2) Rámeček N x N – okraj z X, vnitřek prázdný.
-#     X se kreslí na prvním a posledním řádku a v prvním a posledním
-#     sloupci; jinde je mezera.
+# B2) Rámeček. Uživatel zadá velikost N. Vnořenými cykly nakresli
+#     čtverec N x N, kde okraj tvoří X a vnitřek je prázdný. Pro N=4:
+#         X X X X
+#         X     X
+#         X     X
+#         X X X X
+#     Zamysli se: na kterém řádku a sloupci se kreslí X a kdy mezera?
 n = int(input("Jak velký rámeček? "))
 for radek in range(n):
     for sloupec in range(n):
@@ -32,37 +39,28 @@ for znak in cislo:
 print("Ciferný součet:", soucet)
 
 
-# B4) Teploty za týden. Sedm teplot – průměr, nejtepleji, nejchladněji
-#     a počet dní pod nulou. První teplotu si uložíme jako výchozí
-#     a zbylých šest s ní porovnáváme.
-prvni = int(input("Zadej teplotu: "))
-soucet = prvni
-nejtepleji = prvni
-nejchladneji = prvni
-pod_nulou = 0
-if prvni < 0:
-    pod_nulou = pod_nulou + 1
+# B4) Teplotní skok. Uživatel postupně zadá sedm denních teplot
+#     (klidně i záporných). Najdi a vypiš největší skok mezi dvěma
+#     sousedními dny – tedy největší rozdíl teplot ze dne na den
+#     (bez ohledu na to, jestli teplota stoupla, nebo klesla).
+predchozi = int(input("Zadej teplotu: "))
+nejvetsi_skok = 0
 for den in range(6):                     # zbývá dalších šest dní
     teplota = int(input("Zadej teplotu: "))
-    soucet = soucet + teplota
-    if teplota > nejtepleji:
-        nejtepleji = teplota
-    if teplota < nejchladneji:
-        nejchladneji = teplota
-    if teplota < 0:
-        pod_nulou = pod_nulou + 1
-print("Průměr:", soucet / 7)
-print("Nejtepleji:", nejtepleji)
-print("Nejchladněji:", nejchladneji)
-print("Dní pod nulou:", pod_nulou)
+    skok = abs(teplota - predchozi)      # rozdíl proti včerejšku, bez ohledu na směr
+    if skok > nejvetsi_skok:
+        nejvetsi_skok = skok
+    predchozi = teplota                  # dnešek se stane včerejškem
+print("Největší skok:", nejvetsi_skok)
 
 
-# B5) Palindrom. Slovo si v cyklu poskládáme pozpátku a porovnáme
-#     s původním. Trik: každé písmeno dáme PŘED to, co už máme.
+# B5) Palindrom. Uživatel zadá slovo. Zjisti, jestli se čte stejně
+#     zepředu i zezadu (třeba "kajak" nebo "radar").
+#     Zamysli se, jak si slovo poskládáš pozpátku a jak obě verze porovnáš.
 slovo = input("Napiš slovo: ")
 obracene = ""
 for znak in slovo:
-    obracene = znak + obracene           # "k" + "aja" = "kaja" ... a tak dál
+    obracene = znak + obracene           # každé písmeno dáme PŘED dosavadní výsledek
 if slovo == obracene:
     print("Je to palindrom.")
 else:
