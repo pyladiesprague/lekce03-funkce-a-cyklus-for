@@ -23,7 +23,7 @@ print("cyklus proběhl", pocet, "krát")    # 10
 
 
 # Násobení v cyklu. Pozor – u násobení musíme začít na jedničce,
-# ne na nule (nulou bychom vynásobili všechno na nulu).
+# ne na nule – násobení nulou by dalo vždycky nulu.
 # Takhle spočítáme 1 * 2 * 3 * 4:
 soucin = 1
 for cislo in range(1, 5):

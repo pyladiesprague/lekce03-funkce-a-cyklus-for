@@ -7,7 +7,7 @@
 
 
 # Představ si hru o třech kolech a v každém kole dva pokusy.
-# Vnější cyklus jsou kola, vnitřní jsou pokusy v rámci jednoho kola:
+# Vnějším cyklem jsou kola, vnitřním pokusy v rámci jednoho kola:
 for kolo in range(1, 4):
     print("Kolo", kolo)
     for pokus in range(1, 3):
