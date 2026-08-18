@@ -13,7 +13,7 @@ soucet = 0
 for cislo in range(1, 6):
     soucet = soucet + cislo   # k dosavadnímu součtu přičti aktuální číslo
 print(soucet)                 # 15   protože 1 + 2 + 3 + 4 + 5
-
+# (Krok za krokem to ukazuje obrázek cyklus_for_soucet_vizualizace.png.)
 
 # Počítadlo – kolikrát se něco stalo. Přičítáme pořád jedničku:
 pocet = 0
