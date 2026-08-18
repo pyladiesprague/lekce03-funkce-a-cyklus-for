@@ -7,7 +7,10 @@
 #
 # Jak se funkce používá:
 #   1. Napíšeme její jméno a za něj závorky ( ).
-#   2. Do závorek dáme vstup – říká se mu argument (třeba text nebo číslo).
+#   2. Do závorek můžeme dát vstup – říká se mu argument (třeba text
+#      nebo číslo). Kolik argumentů funkce chce, je u každé jiné:
+#      některé žádný nepotřebují, jiné vyžadují jeden a některé jich
+#      berou i víc. Sama si to určíš, až budeš psát vlastní funkce.
 #   3. Funkce něco udělá. A jsou dva druhy:
 #        - buď nám VRÁTÍ výsledek, který si uložíme a dál s ním pracujeme,
 #        - nebo jen něco provede a žádnou užitečnou hodnotu zpět nedá.
